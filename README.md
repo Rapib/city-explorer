@@ -20,6 +20,51 @@
 
 Lab 6:
 ![lab6](img/lab6.jpg)
+03-06-2231 1520 - Weibiste is up with API token
+Name of feature: 1. Set up
 
+Estimate of time needed to complete: 30min_
+
+Start time: 1500
+
+Finish time: 1520
+
+Actual time needed to complete: 20min
+
+---------
+
+Name of feature: _2. Locations
+
+Estimate of time needed to complete: 60min
+
+Start time: 1530_
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+----------
+
+Name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+---------
+
+Name of feature: ________________________________
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->

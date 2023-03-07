@@ -1,6 +1,7 @@
 import React from 'react';
 import Forms from './Form';
 import List from './List';
+import Alert from 'react-bootstrap/Alert'
 import axios from 'axios';
 import './App.css';
 
@@ -36,7 +37,7 @@ class App extends React.Component {
       console.log(error.message);
       this.setState({
         error: true,
-        errorMsg: `${error.message}`,
+        errorMsg: `🚨Status: ${error.message}`,
       })
     }
   }
@@ -62,15 +63,17 @@ class App extends React.Component {
             handleSubmitCity={this.handleSubmitCity}
             cityData={this.state.cityData}
           />
-          {this.state.error || this.state.cityDataEmpty
-            ?
-            <p>{this.state.errorMsg}</p>
-
+          {this.state.error || this.state.cityDataEmpty ?
+            <Alert key='danger' variant='danger'>
+              {this.state.errorMsg}</Alert>
             :
             <List
               data={this.state.cityData}
             />
           }
+
+          
+
         </main>
         <footer>by Thomas</footer>
       </>

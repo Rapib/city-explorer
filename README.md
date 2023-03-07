@@ -39,17 +39,17 @@ Estimate of time needed to complete: 60min
 
 Start time: 1530_
 
-Finish time: _____
+Finish time: 1730_
 
-Actual time needed to complete: _____
+Actual time needed to complete: _120min
 
 ----------
 
-Name of feature: ________________________________
+Name of feature: 3. map
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: _120min_
 
-Start time: _____
+Start time: 1730_
 
 Finish time: _____
 

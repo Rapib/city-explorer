@@ -12,23 +12,34 @@ class App extends React.Component {
       city: '',
       cityData: {},
       lat: '',
-      lon: ''
+      lon: '',
+      error: false,
+      errorMsg: '',
+      cityDataEmpty: true,
     }
   }
 
   // handle functions
   handleSubmitCity = async (event) => {
     event.preventDefault();
-    let cityToApi = await axios.get(`https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`);
+    try {
+      let cityToApi = await axios.get(`https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`);
 
-    this.setState({
-      cityData: cityToApi.data[0],
-      lat: cityToApi.data[0].lat,
-      lon: cityToApi.data[0].lon
-    })
-
+      this.setState({
+        cityData: cityToApi.data[0],
+        lat: cityToApi.data[0].lat,
+        lon: cityToApi.data[0].lon,
+        cityDataEmpty: false,
+        error: false,
+      })
+    } catch (error) {
+      console.log(error.message);
+      this.setState({
+        error: true,
+        errorMsg: `${error.message}`,
+      })
+    }
   }
-
   handleTextCity = (e) => {
 
     this.setState({
@@ -43,7 +54,7 @@ class App extends React.Component {
     return (
       <>
         <header>
-          <h1>City Explorer</h1>
+          <h1>City Xplorer</h1>
         </header>
         <main>
           <Forms
@@ -51,11 +62,17 @@ class App extends React.Component {
             handleSubmitCity={this.handleSubmitCity}
             cityData={this.state.cityData}
           />
-          <List
-            data={this.state.cityData}
-          />
-        </main>
+          {this.state.error || this.state.cityDataEmpty
+            ?
+            <p>{this.state.errorMsg}</p>
 
+            :
+            <List
+              data={this.state.cityData}
+            />
+          }
+        </main>
+        <footer>by Thomas</footer>
       </>
     );
   }

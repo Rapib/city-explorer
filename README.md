@@ -20,7 +20,10 @@
 
 Lab 6:
 ![lab6](img/lab6.jpg)
-03-06-2231 1520 - Weibiste is up with API token
+03-06-2023 1520 - Weibiste is up with API token
+03-06-2023 1730 - location function complete
+03-06-2023 2030 - map function complete
+
 Name of feature: 1. Set up
 
 Estimate of time needed to complete: 30min_
@@ -39,29 +42,29 @@ Estimate of time needed to complete: 60min
 
 Start time: 1530_
 
-Finish time: _____
+Finish time: 1730_
 
-Actual time needed to complete: _____
+Actual time needed to complete: _120min
 
 ----------
 
-Name of feature: ________________________________
+Name of feature: 3. map
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: _120min_
 
-Start time: _____
+Start time: 1730_
 
-Finish time: _____
+Finish time: 2030
 
-Actual time needed to complete: _____
+Actual time needed to complete: 180min
 
 ---------
 
 Name of feature: ________________________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 60min_
 
-Start time: _____
+Start time: 2030
 
 Finish time: _____
 

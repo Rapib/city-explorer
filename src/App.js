@@ -19,7 +19,6 @@ class App extends React.Component {
   // handle functions
   handleSubmitCity = async (event) => {
     event.preventDefault();
-    console.log('handleSubmitCity works');
     let cityToApi = await axios.get(`https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`);
 
     this.setState({

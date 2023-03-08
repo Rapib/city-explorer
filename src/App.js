@@ -1,7 +1,8 @@
 import React from 'react';
 import Forms from './Form';
 import List from './List';
-import Alert from 'react-bootstrap/Alert'
+import Alert from 'react-bootstrap/Alert';
+import Weather from './Weather';
 import axios from 'axios';
 import './App.css';
 
@@ -17,6 +18,8 @@ class App extends React.Component {
       error: false,
       errorMsg: '',
       cityDataEmpty: true,
+      cityWeather: {},
+      cityWeatherEmpty: true,
     }
   }
 
@@ -25,13 +28,17 @@ class App extends React.Component {
     event.preventDefault();
     try {
       let cityToApi = await axios.get(`https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`);
-
+      let cityToServer = await axios.get(`${process.env.REACT_APP_SERVER}/weather?search=${this.state.city}`);
+      console.log(cityToServer);
       this.setState({
         cityData: cityToApi.data[0],
         lat: cityToApi.data[0].lat,
         lon: cityToApi.data[0].lon,
         cityDataEmpty: false,
         error: false,
+        cityWeather: cityToServer.data,
+        cityWeatherEmpty: false,
+
       })
     } catch (error) {
       console.log(error.message);
@@ -63,13 +70,18 @@ class App extends React.Component {
             handleSubmitCity={this.handleSubmitCity}
             cityData={this.state.cityData}
           />
-          {this.state.error || this.state.cityDataEmpty ?
+          {this.state.error || this.state.cityDataEmpty || this.state.cityWeatherEmpty ?
             <Alert key='danger' variant='danger'>
               {this.state.errorMsg}</Alert>
             :
+            <>
             <List
               data={this.state.cityData}
             />
+            <Weather
+              cityWeather={this.state.cityWeather}
+            />
+            </>
           }
 
           

@@ -87,7 +87,7 @@ class App extends React.Component {
           
 
         </main>
-        <footer>by Thomas</footer>
+        <footer>by Thomas<br/>Background Image, <a href="https://commons.wikimedia.org/wiki/File:The_Amazing_Earth.jpg">V.Cid7413</a>,<a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons</footer>
       </>
     );
   }

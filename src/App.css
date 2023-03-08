@@ -2,11 +2,12 @@ h1 {
   font-size: 70px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
-  color:rgb(0, 81, 173);
+  color:rgb(255, 255, 255);
 }
 
 
 footer {
-  margin-top: 30px;
+  margin-top: 25px;
   margin-bottom: 20px;
+  color: white;
 }

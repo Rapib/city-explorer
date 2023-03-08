@@ -3,11 +3,19 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 class Weather extends React.Component {
   render() {
+
+
+    let newList = this.props.cityWeather.map((i,idx) => {
+      return <>
+        <ListGroup.Item variant="success" key='idx'>Date: {i.date}</ListGroup.Item>
+        <ListGroup.Item >Description: {i.description}</ListGroup.Item>
+      </>
+
+    });
     return (
       <>
-        <ListGroup horizontal>
-          <ListGroup.Item variant="success">Date: {this.props.cityWeather.date}</ListGroup.Item>
-          <ListGroup.Item variant="success">Description: {this.props.cityWeather.description}</ListGroup.Item>
+        <ListGroup>
+          {newList}
         </ListGroup>
       </>
     );

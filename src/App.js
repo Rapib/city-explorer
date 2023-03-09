@@ -3,6 +3,7 @@ import Forms from './Form';
 import List from './List';
 import Alert from 'react-bootstrap/Alert';
 import Weather from './Weather';
+import Movie from './Movie';
 import axios from 'axios';
 import './App.css';
 
@@ -20,6 +21,7 @@ class App extends React.Component {
       cityDataEmpty: true,
       cityWeather: {},
       cityWeatherEmpty: true,
+      movieData: {},
 
     }
   }
@@ -30,6 +32,7 @@ class App extends React.Component {
     try {
       let cityToApi = await axios.get(`https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`);
 
+      let movieToServer = await axios.get(`${process.env.REACT_APP_SERVER}/movie?keyword=${this.state.city}`);
 
       let cityToServer = await axios.get(`${process.env.REACT_APP_SERVER}/weather?search=${this.state.city}&lat=${cityToApi.data[0].lat}&lon=${cityToApi.data[0].lon}`);
 
@@ -42,9 +45,10 @@ class App extends React.Component {
         error: false,
         cityWeather: cityToServer.data,
         cityWeatherEmpty: false,
+        movieData: movieToServer.data,
 
       })
-
+      console.log(movieToServer.data);
     } catch (error) {
 
       console.log(error.message);
@@ -86,6 +90,9 @@ class App extends React.Component {
             />
             <Weather
               cityWeather={this.state.cityWeather}
+            />
+            <Movie
+            movieData={this.state.movieData}
             />
             </>
           }

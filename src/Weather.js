@@ -7,8 +7,8 @@ class Weather extends React.Component {
 
     let newList = this.props.cityWeather.map((i,idx) => {
       return <>
-        <ListGroup.Item variant="success" key='idx'>Date: {i.date}</ListGroup.Item>
-        <ListGroup.Item >Description: {i.description}</ListGroup.Item>
+        <ListGroup.Item variant="success" key={idx}>Date: {i.date}</ListGroup.Item>
+        <ListGroup.Item>Description: {i.description}</ListGroup.Item>
       </>
 
     });

@@ -1,0 +1,22 @@
+.card {
+  align-items: center;
+  text-align: center;
+  width: 650px;
+  margin: 30px auto;
+}
+
+.card img {
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  align-items: center;
+  text-align: center;
+  /* color: black;
+  background-color: antiquewhite; */
+}
+
+p, .list-group-item, .card-body div {
+  color: black;
+}
+

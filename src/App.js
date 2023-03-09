@@ -20,6 +20,7 @@ class App extends React.Component {
       cityDataEmpty: true,
       cityWeather: {},
       cityWeatherEmpty: true,
+
     }
   }
 
@@ -28,8 +29,11 @@ class App extends React.Component {
     event.preventDefault();
     try {
       let cityToApi = await axios.get(`https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`);
-      let cityToServer = await axios.get(`${process.env.REACT_APP_SERVER}/weather?search=${this.state.city}`);
-      console.log(cityToServer);
+
+
+      let cityToServer = await axios.get(`${process.env.REACT_APP_SERVER}/weather?search=${this.state.city}&lat=${cityToApi.data[0].lat}&lon=${cityToApi.data[0].lon}`);
+
+
       this.setState({
         cityData: cityToApi.data[0],
         lat: cityToApi.data[0].lat,
@@ -40,7 +44,9 @@ class App extends React.Component {
         cityWeatherEmpty: false,
 
       })
+
     } catch (error) {
+
       console.log(error.message);
       this.setState({
         error: true,

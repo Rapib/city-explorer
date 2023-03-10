@@ -35,8 +35,8 @@ class App extends React.Component {
       let movieToServer = await axios.get(`${process.env.REACT_APP_SERVER}/movie?keyword=${this.state.city}`);
 
       let cityToServer = await axios.get(`${process.env.REACT_APP_SERVER}/weather?search=${this.state.city}&lat=${cityToApi.data[0].lat}&lon=${cityToApi.data[0].lon}`);
-
-
+      console.log(cityToApi.data[0].lat);
+      console.log(cityToApi.data[0].lon);
       this.setState({
         cityData: cityToApi.data[0],
         lat: cityToApi.data[0].lat,
@@ -48,7 +48,8 @@ class App extends React.Component {
         movieData: movieToServer.data,
 
       })
-      console.log(movieToServer.data);
+      // console.log(movieToServer.data);
+      console.log(cityToServer.data);
     } catch (error) {
 
       console.log(error.message);

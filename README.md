@@ -71,5 +71,39 @@ Start time: 2030
 Finish time: _2240_
 
 Actual time needed to complete: ____130min_
+
+
+---------------------------
+
+Lab 7
+
+03-08-2023 2300 - Movie is Live
+
+Name of feature:  movie
+
+Estimate of time needed to complete: 5hrs
+
+Start time: 2100
+
+Finish time: 2300
+
+Actual time needed to complete: 2hr
+
+---------------------------
+
+Lab9
+03-09-2023 1500 - Refactor
+
+Name of feature:  Refactor
+
+Estimate of time needed to complete: 60min_
+
+Start time: 1500
+
+Finish time: 1500
+
+Actual time needed to complete: 30min
+
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->

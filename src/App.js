@@ -3,7 +3,7 @@ import Forms from './Form';
 import List from './List';
 import Alert from 'react-bootstrap/Alert';
 import Weather from './Weather';
-import Movie from './Movie';
+import Movies from './Movies';
 import axios from 'axios';
 import './App.css';
 
@@ -81,26 +81,30 @@ class App extends React.Component {
             cityData={this.state.cityData}
           />
           {this.state.error || this.state.cityDataEmpty || this.state.cityWeatherEmpty ?
-            <Alert key='danger' variant='danger'>
-              {this.state.errorMsg}</Alert>
+            <></>
             :
             <>
-            <List
-              data={this.state.cityData}
-            />
-            <Weather
-              cityWeather={this.state.cityWeather}
-            />
-            <Movie
-            movieData={this.state.movieData}
-            />
+              <List
+                data={this.state.cityData}
+              />
+              <Weather
+                cityWeather={this.state.cityWeather}
+              />
+              <Movies
+                movieData={this.state.movieData}
+              />
             </>
           }
+          {
+            this.state.error && <Alert key='danger' variant='danger'>
+              {this.state.errorMsg}</Alert>
+          }
 
-          
+
+
 
         </main>
-        <footer>by Thomas<br/>Background Image, <a href="https://commons.wikimedia.org/wiki/File:The_Amazing_Earth.jpg">V.Cid7413</a>,<a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons</footer>
+        <footer>by Thomas<br /><a href="https://commons.wikimedia.org/wiki/File:The_Amazing_Earth.jpg">V.Cid7413</a>,<a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons</footer>
       </>
     );
   }

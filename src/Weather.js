@@ -7,8 +7,10 @@ class Weather extends React.Component {
 
     let newList = this.props.cityWeather.map((i) => {
       return <WeatherDay
-        date={i.date}
-        description={i.description}
+      date={i.time}
+      description={i.forecast}
+        // date={i.date}
+        // description={i.description}
       />
     })
 

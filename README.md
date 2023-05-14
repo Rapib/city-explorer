@@ -1,12 +1,18 @@
 # City Xplorer
-Website: https://cityxplorer.netlify.app/
-
-*Please be aware that I am using a free API service, so it may take some time to receive the response.*
 
 ## Overview
-- Users can search for a city's related information 
-- Built with React, HTML, CSS, JavaScript, and APIs
 
+- Users can search for a city's related information
+- Built with React, Node.js, HTML, CSS, JavaScript, and APIs
+
+## Links
+
+- Website: <https://cityxplorer.netlify.app/>
+
+- Frontend: <https://github.com/Rapib/city-explorer>
+
+- Backend: <https://github.com/Rapib/city-explorer-api>
+
+*Please be aware that free API services are being used, so it may take some time to receive all the responses.*
 
 ## Screenshots
-![Screenshot 2023-05-14 at 15-21-39 React App](https://github.com/Rapib/city-explorer/assets/120158188/b3193b3f-bdd6-4423-9fa7-4b5f2176d0e3)

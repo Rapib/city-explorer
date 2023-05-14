@@ -2,14 +2,12 @@ import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import './List.css'
 
-
-
-
 class List extends React.Component {
 
   render() {
     return (
       <>
+      <h2>City information:</h2>
         <ListGroup>
           <ListGroup.Item>City: {this.props.data.display_name}</ListGroup.Item>
           <ListGroup.Item>Latitude: {this.props.data.lat}</ListGroup.Item>
@@ -22,8 +20,5 @@ class List extends React.Component {
     )
   }
 }
-
-
-
 
 export default List;

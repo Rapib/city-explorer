@@ -1,5 +1,5 @@
 # City Xplorer
-Website: (https://cityxplorer.netlify.app/)
+Website: https://cityxplorer.netlify.app/
 
 *Please be aware that I am using a free API service, so it may take some time to receive the response.*
 

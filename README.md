@@ -7,7 +7,7 @@
 
 ## Links
 
-- Website: <https://cityxplorer.netlify.app/>
+- Website: <https://cityxplorer.netlify.app>
 
 - Frontend: <https://github.com/Rapib/city-explorer>
 
